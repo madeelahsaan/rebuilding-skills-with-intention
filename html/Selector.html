@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        /* universal selector * */
+        *{
+            border: 1px solid black;
+            margin: 10px;
+        }
+        
+        /* type selector */
+        h2{
+            background: red;
+        }
+
+        /* class selector */
+        .blue{
+            color: blue;
+        }
+
+        /* id selector */
+        #red{
+            color: red;
+        }
+
+        /* combining selector */
+        .blue, span{
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>heading-1</h2>
+        <p id="red">Hi it is paragraph-1</p>  <!-- ID selector -->
+        <span>it is text in span-1</span>
+    </div>
+    <div>
+        <h2>heading-2</h2>
+        <p class="blue">Hi it is paragraph-2</p>
+        <span>it is text in span-2</span>
+    </div>
+    <div>
+        <h2>heading-3</h2>
+        <p>Hi it is paragraph-3</p>
+        <span class="blue">it is text in span-3</span>
+    </div>
+    <div>
+        <h2 class="blue">heading-4</h2>
+        <p>Hi it is paragraph-4</p>
+        <span>it is text in span-4</span>
+    </div>
+</body>
+</html>
