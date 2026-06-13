@@ -11,47 +11,107 @@
             margin: 10px;
         }
         
+/* ========================================= */
         /* type selector */
-        h2{
+        h3{
             background: red;
         }
 
+        b{
+            color: #fff;
+             background: black;
+        }
+
+/* ========================================= */
         /* class selector */
         .blue{
             color: blue;
         }
+        .cyan{
+            background: cyan;
+        }
 
+/* ========================================= */
         /* id selector */
         #red{
             color: red;
         }
-
-        /* combining selector */
-        .blue, span{
-            background: yellow;
+        #id-selector{
+            background: green;
         }
+
+/* ========================================= */
+        /* combining selector */
+        .gray, .para{
+            background: gray;
+        }
+
+/* ========================================= */
+        /* child selector */
+        .container > h2{
+            background: pink;
+        }
+
+/* ========================================= */
+        /* sibling selector */
+        
+        /* + sign in sibling selector means select the next first sibling element */
+        /* li.main + li{
+            background: yellow;
+        } */
+
+        /* ~ sign in sibling selector means select next all the sibling element */
+        /* li.main ~ li{
+            background: yellow;
+        } */
+
+
+
     </style>
 </head>
 <body>
+
+    <!-- type selector -->
     <div>
-        <h2>heading-1</h2>
+        <h3>type selector</h3>
+        <i>Hi it is paragraph-1</i>  <!-- ID selector -->
+        <b>it is b-tag its work blod the text</b>
+    </div>
+
+    <!-- id selector -->
+    <div>
+        <h2 id="id-selector">id selector</h2>
         <p id="red">Hi it is paragraph-1</p>  <!-- ID selector -->
         <span>it is text in span-1</span>
     </div>
+
+    <!-- class selector -->
     <div>
-        <h2>heading-2</h2>
-        <p class="blue">Hi it is paragraph-2</p>
+        <h2 class="cyan">class selector</h2>
+        <p class="blue">Hi it is paragraph-2</p>  <!-- class selector -->
         <span>it is text in span-2</span>
     </div>
+
+    <!-- combining selectors -->
     <div>
-        <h2>heading-3</h2>
-        <p>Hi it is paragraph-3</p>
-        <span class="blue">it is text in span-3</span>
+        <h2 class="gray">combining selectors</h2>
+        <p class="para">Hi it is paragraph-3</p>
+        <span >it is text in span-3</span>  <!-- class selector -->
     </div>
-    <div>
-        <h2 class="blue">heading-4</h2>
-        <p>Hi it is paragraph-4</p>
+
+    <!-- child Selector -->
+    <div class="container">
+        <h2 >child selector</h2>     
+        <p >Hi it is paragraph-4</p>
         <span>it is text in span-4</span>
     </div>
+
+    <!-- sibling Selector -->
+     <ul>
+        <li>sibling selector list-item-1</li>
+        <li class="main">sibling selector list-item-2</li>
+        <li>sibling selector list-item-3</li>
+        <li>sibling selector list-item-4</li>
+     </ul>
 </body>
 </html>
