@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        /* specificity value of each selector is calculated as follows: */
+        /* inline style = 1000 */
+        /* id selector = 100 */
+        /* class selector = 10 */
+        /* type selector = 1 */
+
+        /* #header{
+            color: green;
+        } */
+
+        /* 0011 */
+        /* 0010 + 0001 = 0011 */
+        /* h1.header{
+            color: orange;
+        } */
+
+        /* 0010 + 0010 = 0020 */
+        .header.heading1{
+            color: purple;
+        }
+        /* 0010 */
+        .header{
+            color: blue;
+        }
+        /* 0001 */
+        h1{
+            color: red;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <h1 class="header heading1" id="header">Heading</h1>
+    <p class="taxt" id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit culpa minus eaque praesentium impedit quia ad sapiente ab, beatae natus, ipsam, a suscipit. Fugiat, praesentium neque. Molestiae vel quis numquam.</p>
+</body>
+</html>
