@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        .container {
+            margin: 20px;
+            width: 250px;
+            height: 250px;
+            border: 2px solid black;
+        }
+        .box {
+            width: 70px;
+            height: 50px;
+            background-color: lightblue;
+        }
+
+        .container-1 .box {
+            /* zero margin, border, padding */
+            margin: 0;
+            border: 0;
+            padding: 0;
+        }
+        .container-2 .box {
+            /* padding */
+            padding: 50px;
+            border: 1px solid red;
+        }
+        .container-3 .box {
+            /* border */
+            border: 10px solid red;
+        }
+        .container-4 .box {
+            /* margin */
+            border: 1px solid red;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container container-1">
+        <div class="box">zero M,B,P</div>
+    </div>
+
+    <!-- padding INNER space -->
+    <div class="container container-2">
+        <div class="box">padding</div>
+    </div>
+
+    <!-- border size -->
+    <div class="container container-3">
+        <div class="box">border</div>
+    </div>
+
+    <!-- margin OUTER space -->
+    <div class="container container-4">
+        <div class="box">margin</div>
+    </div>
+</body>
+</html>
