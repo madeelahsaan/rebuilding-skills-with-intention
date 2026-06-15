@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .main {
+            width: 500px;
+            height: 250px;
+            background-color: rgb(163, 110, 110);
+            margin: 20px;
+        }
+        .box {
+            text-align: center;
+            padding: 10px;
+            width: 150px;
+            height: auto;
+            background-color: lightblue;
+        }
+
+        .child1{
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+
+        .comtainer2{
+            position: relative;
+        }
+        .child2{
+            position: absolute;
+            bottom: 20px;
+            right: 100px;
+        }
+        .child3{
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .child4{
+            position: sticky;
+            top: 0px;
+            left: 175px;
+        }
+    </style>
+</head>
+<body>
+    <!-- sticky position stick on the top while it parent element is in view -->
+    <div class="main comtainer4">
+        <div class="box child4">Position Static</div>
+    </div>
+
+    <!-- Position Relative move for their position -->
+    <div class="main comtainer1">
+        <div class="box child1">Position Relative</div>
+    </div>
+
+    <!-- position absolute move relative to the nearest positioned ancestor -->
+    <div class="main comtainer2">
+        <div class="box child2">Position Absolute</div>
+    </div>
+
+    <!-- position fixed move relative to the viewport like html page -->
+    <div class="main comtainer3">
+        <div class="box child3">Position Fixed</div>
+    </div>
+    
+</body>
+</html>
