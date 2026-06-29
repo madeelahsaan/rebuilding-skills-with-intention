@@ -1,0 +1,38 @@
+.green{
+    background-color: green;
+}
+.red{
+    background-color: red;
+}
+.orange{
+    background-color: orange;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container{
+    width: 800px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 10px;
+}
+.grid-item{
+    border: 1px solid black;
+}
+.grid-item-1{
+    grid-row:span 3;
+}
+.grid-item-2{
+    grid-column: span 2;
+}
+.grid-item-6{
+    grid-row: span 2;
+}
